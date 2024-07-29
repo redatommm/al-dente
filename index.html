@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.8/dist/lenis.css">
 </head>
 <body>
     <header class="header">
@@ -97,7 +98,7 @@
           </p>
 
           <div class="arrow">
-            <svg width="166" height="167" viewBox="0 0 166 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg  width="166" height="167" viewBox="0 0 166 167" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M164.314 156.567C165.24 155.965 165.503 154.727 164.901 153.8L155.094 138.707C154.492 137.781 153.253 137.518 152.327 138.119C151.401 138.721 151.138 139.96 151.739 140.886L160.457 154.303L147.041 163.02C146.114 163.622 145.851 164.861 146.453 165.787C147.055 166.713 148.294 166.976 149.22 166.375L164.314 156.567ZM0.291614 1.31947C10.1053 54.614 25.4889 88.3069 51.276 111.29C77.0048 134.222 112.817 146.234 162.809 156.847L163.639 152.934C113.715 142.336 78.8231 130.485 53.9374 108.304C29.1101 86.1762 13.9689 53.508 4.22548 0.595084L0.291614 1.31947Z" fill="url(#paint0_linear_80_10)" />
             <defs>
               <linearGradient id="paint0_linear_80_10" x1="166.298" y1="160.485" x2="-1.50274" y2="12.2388" gradientUnits="userSpaceOnUse">
@@ -110,7 +111,7 @@
 
 
           <div class="main-action">
-            <svg style="position: absolute; " width="227" height="227" viewBox="0 0 227 227" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="svg" style="position: absolute; " width="227" height="227" viewBox="0 0 227 227" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="113.5" cy="113.5" r="113.5" fill="#AB8E67" />
               <circle cx="113.5" cy="113.5" r="113.5" fill="url(#paint0_linear_9_48)" />
               <circle cx="113.5" cy="113.5" r="111.5" stroke="url(#paint1_diamond_9_48)" stroke-opacity="0.5" stroke-width="4" />
@@ -126,7 +127,7 @@
                 </radialGradient>
               </defs>
             </svg>
-            <svg style="z-index: -2; position: absolute;" width="273" height="273" viewBox="0 0 273 273" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="svg" style="z-index: -2; position: absolute;" width="273" height="273" viewBox="0 0 273 273" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g opacity="0.7" filter="url(#filter0_f_9_47)">
                 <circle cx="136.5" cy="136.5" r="113.5" fill="#AB8E67" />
                 <circle cx="136.5" cy="136.5" r="113.5" fill="url(#paint0_linear_9_47)" />
@@ -475,37 +476,91 @@
 
     <section class="gallery">
       <div class="container">
-        <div class="slide-container">
-	
-          <div class="slides">
-            <img src="/img/image-1.jpg" class="active">
-            <img src="/img/image-2.jpg">
-            <img src="/img/image-3.jpg">
-            <img src="/img/image-4.jpg">
-            <img src="/img/image-5.jpg">
+
+        <div class="slider">
+          <div class="list">
+              <div class="item">
+                  <img src="img/1.jpg" alt="">
+              </div>
+              <div class="item">
+                  <img src="img/2.jpg" alt="">
+              </div>
+              <div class="item">
+                  <img src="img/3.jpg" alt="">
+              </div>
+              <div class="item">
+                  <img src="img/4.jpg" alt="">
+              </div>
+              <div class="item">
+                  <img src="img/5.jpg" alt="">
+              </div>
           </div>
-        
           <div class="buttons">
-            <span class="next">&#10095;</span>
-            <span class="prev">&#10094;</span>
+              <button id="prev"><</button>
+              <button id="next">></button>
           </div>
-        
-          <div class="dotsContainer">
-            <div class="dot active" attr='0' onclick="switchImage(this)"></div>
-            <div class="dot" attr='1' onclick="switchImage(this)"></div>
-            <div class="dot" attr='2' onclick="switchImage(this)"></div>
-            <div class="dot" attr='3' onclick="switchImage(this)"></div>
-            <div class="dot" attr='4' onclick="switchImage(this)"></div>
-          </div>
-        
-        </div>
+          <ul class="dots">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
       </div>
-    </section>
+      </div>
+  </section>
 
     <section class="section-faq">
       <div class="container">
         <div class="container-faq">
           <div class="form">
+            <div class="form-item">
+              <input type="text" class="form-input-text" name="nameCompany" autocomplete="off" required>
+              <label for="nameCompany" class="form-label">
+                <span class="form-label-name">Name *</span>
+                <div class="form-label-line">
+                  <div class="form-label-bg"></div>
+                </div>
+                <div class="form-label-sq"></div>
+              </label>
+            </div>
+            <div class="form-item">
+              <input type="text" class="form-input-text" name="telephoneCompany" autocomplete="off" required>
+              <label for="nameCompany" class="form-label">
+                <span class="form-label-name">Telephone *</span>
+                <div class="form-label-line">
+                  <div class="form-label-bg"></div>
+                </div>
+                <div class="form-label-sq"></div>
+              </label>
+            </div>
+            <div class="form-item">
+              <input type="text" class="form-input-text" name="mailCompany" autocomplete="off" required>
+              <label for="nameCompany" class="form-label">
+                <span class="form-label-name">E-mail *</span>
+                <div class="form-label-line">
+                  <div class="form-label-bg"></div>
+                </div>
+                <div class="form-label-sq"></div>
+              </label>
+            </div>
+
+            <button class="form-btn">
+              <span class="form-btn-txt">Отправить</span>
+              <div class="form-btn-bg"></div>
+            </button>
+            <!-- <form id="contactForm">
+              <label for="name">Имя:</label>
+              <input type="text" id="name" name="name" required><br><br>
+      
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required><br><br>
+      
+              <label for="message">Сообщение:</label>
+              <textarea id="message" name="message" required></textarea><br><br>
+      
+              <button type="submit">Отправить</button>
+          </form> -->
 
           </div>
           <div class="question-faq">
@@ -525,7 +580,7 @@
               </div>
 
               <div class="answer">
-                <p>Рекомендуется посещение стоматолога как минимум дважды в год для профилактического осмотра и чистки зубов. Однако, если у вас есть специфические проблемы со здоровьем полости рта, вам может потребоваться более частое посещение стоматолога. Всегда лучше проконсультироваться с врачом, чтобы определить оптимальное расписание посещений.</p>
+                <p>Рекомендуется посещение стоматолога как минимум дважды в год для профилактического осмотра и чистки зубов. <br> Однако, если у вас есть специфические проблемы со здоровьем полости рта, вам может потребоваться более частое посещение стоматолога. Всегда лучше проконсультироваться с врачом, чтобы определить оптимальное расписание посещений.</p>
               </div>
             </div>
             <div class="faq">
@@ -564,6 +619,16 @@
         </div>
       </div>
     </section>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="logo">
+          <img src="images/Logo.png" alt="Logo">
+        </div>
+        <div class="rights">Все права защищены</div>
+      </div>
+    </footer>
     
 
     
@@ -577,5 +642,13 @@
     new WOW().init();
     </script>
     <script src="wow.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
-</html>
+    <script src="lenis.js"></script>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.8/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+</html> 
